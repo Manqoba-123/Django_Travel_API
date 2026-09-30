@@ -119,6 +119,8 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'travel_api.wsgi.application'
 
+AUTH_USER_MODEL = 'accounts.User'
+
 
 # Database
 # https://docs.djangoproject.com/en/6.1/ref/settings/#databases
