@@ -1,11 +1,11 @@
 from rest_framework import generics
-from .models import Review
-from .serializers import ReviewSerializer
+from .models import Budget
+from .serializers import BudgetSerializer
 
-class ReviewListCreateView(generics.ListCreateAPIView):
-    queryset = Review.objects.all()
-    serializer_class = ReviewSerializer
+class BudgetListCreateView(generics.ListCreateAPIView):
+    queryset = Budget.objects.all()
+    serializer_class = BudgetSerializer
 
-class ReviewDetailView(generics.RetrieveUpdateDestroyAPIView):
-    queryset = Review.objects.all()
-    serializer_class = ReviewSerializer
+class BudgetDetailView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Budget.objects.all()
+    serializer_class = BudgetSerializer

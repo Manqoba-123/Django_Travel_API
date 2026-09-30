@@ -1,7 +1,7 @@
 from django.urls import path
-from .views import ReviewListCreateView, ReviewDetailView
+from .views import BudgetListCreateView, BudgetDetailView
 
 urlpatterns = [
-    path('', ReviewListCreateView.as_view(), name='review-list-create'),
-    path('<int:pk>/', ReviewDetailView.as_view(), name='review-detail'),
+    path('', BudgetListCreateView.as_view(), name='budget-list-create'),
+    path('<int:pk>/', BudgetDetailView.as_view(), name='budget-detail'),
 ]

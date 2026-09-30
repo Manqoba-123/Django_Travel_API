@@ -1,7 +1,7 @@
 from rest_framework import serializers
-from .models import Review
+from .models import Budget
 
-class ReviewSerializer(serializers.ModelSerializer):
+class BudgetSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Review
+        model = Budget
         fields = '__all__'
