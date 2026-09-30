@@ -1,12 +1,10 @@
 from django.db import models
-from accounts.models import User
-from destinations.models import Destination
+from itineraries.models import Itinerary
 
-class Review(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
-    destination = models.ForeignKey(Destination, on_delete=models.CASCADE)
-    rating = models.IntegerField()
-    comment = models.TextField()
+class Budget(models.Model):
+    itinerary = models.ForeignKey(Itinerary, on_delete=models.CASCADE)
+    amount = models.DecimalField(max_digits=10, decimal_places=2)
+    notes = models.TextField(blank=True, null=True)
 
     def __str__(self):
-        return f"{self.user.username} - {self.destination.name}"
+        return f"{self.itinerary.title} - {self.amount}"
